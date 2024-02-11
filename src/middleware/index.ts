@@ -70,14 +70,10 @@ export default function (app: Application): void {
     upload2.single("itemImage"),
     uploadItemImages()
   );
-  app.get(
-    "/uploadProfileImage/:id",
-
-    (req: any, res: any): any => {
-      const id = req.params.id;
-      res.sendFile(path.join(__dirname, `../../public/profileImages/${id}`));
-    }
-  );
+  app.get("/profileImages/:id", (req: any, res: any): any => {
+    const id = req.params.id;
+    res.sendFile(path.join(__dirname, `../../public/profileImages/${id}`));
+  });
   app.get("/getItemImage/:id", (req: any, res: any): any => {
     const id = req.params.id;
     res.sendFile(path.join(__dirname, `../../public/itemImages/${id}`));

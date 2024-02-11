@@ -17,13 +17,13 @@ export default () => {
           // console.error(`File does not exist: ${filePath}`);
         } else {
           // File exists, proceed with deletion
-          fs.unlink(filePath, (deleteErr: any) => {
-            if (deleteErr) {
-              console.error(`Error deleting file: ${deleteErr}`);
-            } else {
-              console.log(`File deleted: ${filePath}`);
-            }
-          });
+          // fs.unlink(filePath, (deleteErr: any) => {
+          //   if (deleteErr) {
+          //     console.error(`Error deleting file: ${deleteErr}`);
+          //   } else {
+          //     console.log(`File deleted: ${filePath}`);
+          //   }
+          // });
         }
       });
 

@@ -21,6 +21,7 @@ export default function (app: Application): Model<any> {
       price: { type: Number, required: true },
       isNegociablePrice: { type: Boolean, required: true },
       images: { type: [String], required: false },
+      likes: { type: [Schema.Types.ObjectId], ref: "users" },
     },
     {
       timestamps: true,
